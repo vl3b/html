@@ -169,7 +169,7 @@ foreach($files as $file) {
     echo("<br>");
 }
 };
-echo ("test");
+echo ("test 2");
 ?>
 </body>
 </html>

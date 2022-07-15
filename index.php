@@ -5,6 +5,11 @@ if (!file_exists("cookies.txt")){
     fwrite($myfile, "\n");
     fclose($myfile);
 }
+if (!file_exists("userData.txt")){
+    $myfile = fopen("userData.txt", "a");
+    fwrite($myfile, "\n");
+    fclose($myfile);
+}
 $myfile = fopen("cookies.txt", "r");
 $myfileArray = explode("\n",fread($myfile,filesize("cookies.txt")));
 $loggedInUser = $myfileArray[0];

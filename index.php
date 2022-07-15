@@ -17,7 +17,7 @@ if (isset($myfileArray[1]))$currentPostEdit = $myfileArray[1];
 if (!isset($_POST['post'])) $_POST['post'] = ''
 ?>
 <!doctype html>
-<html style="background-color: #eeeeee;">
+<html style="background-color: #666666;">
 <head>
 <?php
 ?>

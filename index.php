@@ -1,9 +1,15 @@
 <?php
 $name = "";
+if (!file_exists("cookies.txt")){
+    $myfile = fopen("cookies.txt", "a");
+    fwrite($myfile, "\n");
+    fclose($myfile);
+}
 $myfile = fopen("cookies.txt", "r");
 $myfileArray = explode("\n",fread($myfile,filesize("cookies.txt")));
 $loggedInUser = $myfileArray[0];
 if (isset($myfileArray[1]))$currentPostEdit = $myfileArray[1];
+if (!isset($_POST['post'])) $_POST['post'] = ''
 ?>
 <!doctype html>
 <html>
@@ -122,7 +128,7 @@ if ($_POST['post'] === 'Edit'){
         }
     } else {
         echo "post can't be empty";
-    }
+    }   
 }
 if ($_POST['post'] === 'Post Edit'){
     $postedit = $_POST['post_edit'];
@@ -139,20 +145,12 @@ if ($_POST['post'] === 'Upload'){
     $myfile = fopen("cookies.txt", "w");
     fwrite($myfile, "$loggedInUser\n$post");
     fclose($myfile);
-    // if (!empty($post)){
-    //     if (file_exists("userData/$loggedInUser/$post")){
-            echo(
-            "<form name='form' action='upload.php' method='post' enctype='multipart/form-data'>
-            <input name='my_file' type='file'/>
-            <input name='submit' type='submit' value='Upload'/>
-            </form>"
-            );
-    //     } else {
-    //         echo "post doesnt exist";
-    //     }
-    // } else {
-    //     echo "post can't be empty";
-    // }
+    echo(
+    "<form name='form' action='upload.php' method='post' enctype='multipart/form-data'>
+    <input name='my_file' type='file'/>
+    <input name='submit' type='submit' value='Upload'/>
+    </form>"
+    );
 }
 
 echo('<h3> Posts </h3>');
@@ -160,8 +158,8 @@ $files = scandir("userData/$loggedInUser");
 foreach($files as $file) {
     if ($file != '.' && $file != '..'){
     echo ("<span>$file: </span>");
-    echo (pathinfo($file,PATHINFO_FILENAME));
-    if (pathinfo("userData/$loggedInUser/$file") == "txt"){
+    $fileExtension = explode(".","userData/$loggedInUser/$file");
+    if ($fileExtension[1] == 'txt'){
         $myfile = fopen("userData/$loggedInUser/$file", "r");
         $fileContent = fread($myfile,filesize("userData/$loggedInUser/$file"));
         echo ("<span>$fileContent<span>");

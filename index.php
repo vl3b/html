@@ -167,7 +167,7 @@ foreach($files as $file) {
     if ($fileExtension[1] == 'txt'){
         $myfile = fopen("userData/$loggedInUser/$file", "r");
         $fileContent = fread($myfile,filesize("userData/$loggedInUser/$file"));
-        echo ("<span>$fileContent<span>");
+        echo ("<span>$fileContent<span><button>Edit</button>");
     }
     echo("<br>");
 }

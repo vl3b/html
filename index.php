@@ -172,6 +172,7 @@ foreach($files as $file) {
     echo("<br>");
 }
 };
+echo ("mega cool test");
 ?>
 </body>
 </html>

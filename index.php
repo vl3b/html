@@ -172,7 +172,7 @@ foreach($files as $file) {
 }
 }
 };
-echo ("<h1>becky is kinda gay</h1>")
+echo("<h1>UwU uwU opwo</h1>")
 ?>
 </body>
 </html>

@@ -67,17 +67,15 @@ if ($_POST['post'] === 'Register'){
         echo "username can't be empty";
     };
 }
-?>
-    <?php if (isset($loggedInUser)) echo("<h2>Logged in user: $loggedInUser</h2>") ?>
-
-<form action="" method="post">
-    <label name="post_name">Post Title:</label><input type="text" name="post_name" value=''/><br>
-    <input name="post" type="submit" value="Post"/>
-    <input name="post" type="submit" value="Edit"/>
-    <input name="post" type="submit" value="Delete"/>
-    <input name="post" type="submit" value="Upload"/>
-</form>
-<?php
+if ($loggedInUser != null){
+echo("<h2>Logged in user: $loggedInUser</h2>");
+echo("<form action='' method='post'>
+    <label name='post_name'>Post Title:</label><input type='text' name='post_name' value=''/><br>
+    <input name='post' type='submit' value='Post'/>
+    <input name='post' type='submit' value='Edit'/>
+    <input name='post' type='submit' value='Delete'/>
+    <input name='post' type='submit' value='Upload'/>
+</form>");
 if ($_POST['post'] === 'Post'){
     $post = $_POST['post_name'];
     if (!empty($post)){
@@ -170,8 +168,11 @@ foreach($files as $file) {
         echo ("<span>$fileContent<span><button>Edit</button>");
     }
     echo("<br>");
+    echo("uwu");
+}
 }
 };
+echo ("<h1>becky is kinda gay</h1>")
 ?>
 </body>
 </html>

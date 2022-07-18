@@ -3,13 +3,26 @@
 </html>
 <body>
 <?php
-for ($x = 0; $x <= 30; $x++) {
-$number = strval(rand(1000,9999));
-$lettera = chr(rand(97,122));
-$letterb = chr(rand(97,122));
-echo("<a href='https://prnt.sc/$lettera$letterb$number'><span>click me! $lettera$letterb$number</span></a><br>");
-}
 ?>
-</body>
 
+<a id="mya" href=""><span id="myspan"> hereismytext </span></a>
+<script>
+const characters ='abcdefghijklmnopqrstuvwxyz';
+const charactersLength = characters.length;
+
+
+var t=setInterval(oneSecondFunction,25);
+function oneSecondFunction() {
+    document.getElementById("mya").href=
+    "https://prnt.sc/"+
+    characters.charAt(Math.floor(Math.random() * charactersLength))+
+    characters.charAt(Math.floor(Math.random() * charactersLength))+
+    (Math.floor(Math.random() * 10)).toString()+
+    (Math.floor(Math.random() * 10)).toString()+
+    (Math.floor(Math.random() * 10)).toString()+
+    (Math.floor(Math.random() * 10)).toString();
+}
+document.getElementById("myspan").textContent="screenshot time baby!";
+</script>
+</body>
 </html>

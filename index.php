@@ -4,7 +4,7 @@ if (isset($_POST['post'])){
     $post = explode(",",$_POST['post']);
     if ($post[0] === 'Post'){
         if (str_contains("/..",$post[1])){
-            $correctPath = explode("",$post[1])
+            $correctPath = explode("",$post[1]);
         }
         $openFile = "$post[2]/$post[1]";
     }

@@ -14,7 +14,7 @@
         echo $res = shell_exec('/var/www/html/manual_gitclone.sh');
     }
     ?>
-    <p>test85</p>
+    <p>tet85</p>
 </body>
 
 </html>

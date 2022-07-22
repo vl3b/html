@@ -15,7 +15,7 @@
         echo $res = shell_exec('/var/www/html/manual_gitclone.sh');
     }
     if (isset($_POST['test'])) {
-        echo $_POST;
+        echo $_POST[0];
     }
     ?>
     <p>tet85</p>

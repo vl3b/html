@@ -4,7 +4,6 @@
 </head>
 
 <body>
-    <p>test</p>
     <?php
         include 'header.html';
         $path = getcwd();

@@ -10,6 +10,7 @@
     </form>
     <?php
     if (isset($_POST['openshellfile'])) {
+        echo ("true");
         echo $res = shell_exec('/var/www/html/manual_gitclone.sh');
     }
     ?>

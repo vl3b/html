@@ -10,7 +10,7 @@
     $filepath = "$path/logs";
     $fileContent = file_get_contents($filepath);
     $contentArray = explode('startofscript', $fileContent);
-    foreach ($contentArray as $content) {
+    foreach (array_reverse($contentArray) as $content) {
         if (strpos($content, 'error', 0)) {
             echo ("<div style=background-color:red;>");
         } else {

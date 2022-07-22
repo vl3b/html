@@ -10,7 +10,6 @@
     </form>
     <?php
     if (isset($_POST['run.sh manual_gitclone.sh'])) {
-        echo($_POST);
         echo ("trueee");
         echo $res = shell_exec('/var/www/html/manual_gitclone.sh');
     }

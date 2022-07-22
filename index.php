@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <form action='shell.php' method='post'>
+    <form action='' method='post'>
         <input type='submit' value='gaming' name='openshellfile' />
     </form>
     <?php

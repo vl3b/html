@@ -5,20 +5,17 @@
 </head>
 
 <body>
+    <?php
+        include 'header.html';
+    ?>
     <form action='' method='post'>
-        <input type='submit' value='build from git' name='openshellfile' />
-        <input type='submit' value='test button' name='test' />
+        <input type='submit' value='build from git now' name='openshellfile' />
     </form>
     <?php
     if (isset($_POST['openshellfile'])) {
-        echo ("trueee");
         echo $res = shell_exec('/var/www/html/manual_gitclone.sh');
     }
-    if (isset($_POST['test'])) {
-        echo $_POST[0];
-    }
     ?>
-    <p>tet85</p>
 </body>
 
 </html>

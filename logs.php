@@ -9,6 +9,8 @@
         $path = getcwd();
         $filepath = "$path/logs";
         $fileContent = file_get_contents($filepath);
+        echo $filepath;
+        echo $fileContent;
         $contentArray = explode("startofscript", $fileContent);
         foreach ($contentArray as $content){
             if (str_contains($content,'=') && str_contains($content,'gitclone.sh')){

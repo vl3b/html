@@ -4,9 +4,10 @@
 </head>
 <body>
     <?php
-    echo shell_exec('sh /var/www/html/gitclone.sh');
+    shell_exec('sh /var/www/html/gitclone.sh');
     ?>
     <p>test</p>
     <p>megatest</p>
+    <p>test5</p>
 </body>
 </html>

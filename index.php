@@ -6,8 +6,6 @@
     <?php
     shell_exec('sh /var/www/html/gitclone.sh');
     ?>
-    <p>test</p>
-    <p>megatest</p>
-    <p>test5</p>
+    <p>test6</p>
 </body>
 </html>

@@ -10,10 +10,10 @@
     </form>
     <?php
     if (isset($_POST['openshellfile'])) {
-        echo $res = shell_exec('/var/www/html/test.sh');
+        echo $res = shell_exec('/var/www/html/gitclone.sh');
     }
     ?>
-    <p>test7</p>
+    <p>test8</p>
 </body>
 
 </html>

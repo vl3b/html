@@ -1,7 +1,8 @@
 html{
     background-color: rgb(127, 127, 127);
+    text-overflow: "ellipsis";
+    white-space: nowrap;
 }
-
 /* unvisited link */
 a:link {
     color: rgb(162, 162, 162);

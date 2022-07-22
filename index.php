@@ -6,10 +6,10 @@
 
 <body>
     <form action='' method='post'>
-        <input type='submit' value='build from git' name='run.sh manual_gitclone.sh' />
+        <input type='submit' value='build from git' name='openshellfile' />
     </form>
     <?php
-    if (isset($_POST['run.sh manual_gitclone.sh'])) {
+    if (isset($_POST['openshellfile'])) {
         echo ("trueee");
         echo $res = shell_exec('/var/www/html/manual_gitclone.sh');
     }

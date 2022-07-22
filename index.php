@@ -4,8 +4,8 @@
 </head>
 <body>
     <?php
-    shell_exec('sh /var/www/html/gitclone.sh');
+    shell_exec('sh /var/www/html/test.sh');
     ?>
-    <p>test6</p>
+    <p>test7</p>
 </body>
 </html>

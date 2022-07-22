@@ -12,7 +12,7 @@
     $contentArray = explode('startofscript', $fileContent);
     echo $fileContent;
     foreach ($contentArray as $content) {
-        if (str_contains($content, 'error')) {
+        if (strpos($content, 'error', 0)) {
             echo ("<div style=background-color:red;>");
         } else {
             echo ("<div>");
